@@ -31,6 +31,8 @@ TARGET=librgbmatrix
 #   regular            # Following this project wiring and using these PCBs
 #   adafruit-hat       # If you have a RGB matrix HAT from Adafruit
 #   adafruit-hat-pwm   # If you have an Adafruit HAT with PWM hardware mod.
+#   adafruit-hat-UPS       # If you have a RGB matrix HAT from Adafruit and you're using it with a Geekworm X728 UPS 
+#   adafruit-hat-UPS-pwm   # If you have an Adafruit HAT with PWM hardware mod and you're using it with a Geekworm X728 UPS
 #   regular-pi1        # If you have an old Pi1 and regular didn't work.
 #   classic            # (deprecated) Classic Pi1/2/. Not used anymore.
 #   classic-pi1        # (deprecated) Classic pinout on Rasperry Pi 1

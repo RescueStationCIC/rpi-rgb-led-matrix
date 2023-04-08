@@ -115,6 +115,55 @@ struct HardwareMapping matrix_hardware_mappings[] = {
   },
 
   /*
+   * This is used if you have an Adafruit HAT in the default configuration,
+   * With connector redirections to avoid clashing with the [UPS](https://wiki.geekworm.com/X728)
+   */
+  {
+    .name          = "adafruit-hat-UPS",
+
+    .output_enable = GPIO_BIT(4),
+    .clock         = GPIO_BIT(17),
+    .strobe        = GPIO_BIT(21),
+
+    .a             = GPIO_BIT(22),
+    .b             = GPIO_BIT(11),
+    .c             = GPIO_BIT(27),
+    .d             = GPIO_BIT(8),
+    .e             = GPIO_BIT(24),  /* Needs manual wiring, see README.md */
+
+    .p0_r1         = GPIO_BIT(10),
+    .p0_g1         = GPIO_BIT(13),
+    .p0_b1         = GPIO_BIT(9),
+    .p0_r2         = GPIO_BIT(25),
+    .p0_g2         = GPIO_BIT(16),
+    .p0_b2         = GPIO_BIT(23),
+  },
+
+  /*
+   * An Adafruit HAT with the PWM modification
+   * With connector redirections to avoid clashing with the [UPS](https://wiki.geekworm.com/X728)
+   */
+  {
+    .name          = "adafruit-hat-UPS-pwm",
+
+    .output_enable = GPIO_BIT(18),  /* The only change compared to above */
+    .clock         = GPIO_BIT(17),
+    .strobe        = GPIO_BIT(21),
+
+    .a             = GPIO_BIT(22),
+    .b             = GPIO_BIT(11),
+    .c             = GPIO_BIT(27),
+    .d             = GPIO_BIT(8),
+    .e             = GPIO_BIT(24),
+
+    .p0_r1         = GPIO_BIT(10),
+    .p0_g1         = GPIO_BIT(13),
+    .p0_b1         = GPIO_BIT(9),
+    .p0_r2         = GPIO_BIT(25),
+    .p0_g2         = GPIO_BIT(16),
+    .p0_b2         = GPIO_BIT(23),
+  },
+  /*
    * The regular pin-out, but for Raspberry Pi1. The very first Pi1 Rev1 uses
    * the same pin for GPIO-21 as later Pis use GPIO-27. Make it work for both.
    */
